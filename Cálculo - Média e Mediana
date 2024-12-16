@@ -1,0 +1,41 @@
+Calculando a Mediana e a Média
+
+salarios = [1100,500,300,200,520,600,320]
+
+def processar_lista(salarios):
+    # Len contabiliza os elementos de uma lista
+    x = len(salarios)
+    # sort organiza em ordem crescrente
+    salarios.sort()
+
+    #conferindo se a lista esta vazia
+    if x == 0:
+        print("A lista está vazia.")
+        return
+
+    if x % 2 == 0:
+        # Lista tem um comprimento par
+        meio1 = x // 2 - 1
+        meio2 = x // 2
+        valor = (salarios[meio1] + salarios[meio2]) / 2
+    else:
+        # Lista tem um comprimento impar
+        meio = x // 2
+        valor = salarios[meio]
+    # obtem valor médio da lista
+    valor_medio = sum(salarios) / len(salarios)
+
+    print(f"A lista contem {x} elementos")
+    print("________________\n")
+    print(f"A lista ordenada é: {salarios}")
+    print("________________\n")
+    print(f"Valor da mediana da lista ordenada: {valor}")
+    print("________________\n")
+    print(f"Valor médio da lista ordenada: {valor_medio}")
+    print("________________\n")
+    print(f"O maior valor da lista é: {max(salarios)}")
+    print("________________\n")
+    print(f"O menor valor da lista é: {min(salarios)}")
+    print("________________\n")
+
+processar_lista(salarios)
